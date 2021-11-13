@@ -3,6 +3,7 @@ package com.kale.employeemanagementservice.EmployeeManagementService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -13,8 +14,8 @@ public class EmployeeManagementServiceApplication {
 		SpringApplication.run(EmployeeManagementServiceApplication.class, args);
 	}
 
-	@GetMapping
+	@RequestMapping("/home")
 	public String yes() {
-		return "yes";
+		return "Hi my name is Chris Broad and this is the home page";
 	}
 }
