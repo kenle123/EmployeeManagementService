@@ -7,3 +7,4 @@
 - Spring Web
 - Thymeleaf
 - PostgreSQL
+- More in the future 👀
