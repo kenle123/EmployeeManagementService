@@ -1,5 +1,5 @@
 # EmployeeManagementService
-#Spring Boot web application to manage employee information
+###Spring Boot web application to manage employee information
  
 ### Current functionality: To be determined :)
 
