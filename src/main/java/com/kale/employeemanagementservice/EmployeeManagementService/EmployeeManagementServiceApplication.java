@@ -16,6 +16,6 @@ public class EmployeeManagementServiceApplication {
 
 	@RequestMapping("/home")
 	public String yes() {
-		return "Hi my name is Chris Broad and this is the home page";
+		return "Test response";
 	}
 }
