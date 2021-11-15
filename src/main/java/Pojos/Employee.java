@@ -5,6 +5,17 @@ public class Employee {
     private String gender;
     private int age;
     private int id;
+    private int salary;
+    private String position;
+
+    public Employee(String name, String gender, int age, int id, int salary, String position) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.id = id;
+        this.salary = salary;
+        this.position = position;
+    }
 
     public Employee(String name, String gender, int age, int id) {
         this.name = name;
@@ -45,13 +56,19 @@ public class Employee {
         this.id = id;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
-                ", age=" + age +
-                ", id=" + id +
-                '}';
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 }
