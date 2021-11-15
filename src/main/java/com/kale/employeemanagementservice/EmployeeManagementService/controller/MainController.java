@@ -9,10 +9,4 @@ public class MainController {
     public String temp() {
         return "Home Screen";
     }
-
-    // Login screen
-    @GetMapping("/login")
-    public String temp2() {
-        return "Login Screen";
-    }
 }
