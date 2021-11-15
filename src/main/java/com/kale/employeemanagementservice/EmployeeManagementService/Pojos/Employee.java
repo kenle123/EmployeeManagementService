@@ -1,4 +1,4 @@
-package Pojos;
+package com.kale.employeemanagementservice.EmployeeManagementService.Pojos;
 
 public class Employee {
     private String name;
