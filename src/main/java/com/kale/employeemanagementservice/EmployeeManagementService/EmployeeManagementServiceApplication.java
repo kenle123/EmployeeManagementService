@@ -7,15 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
 public class EmployeeManagementServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeeManagementServiceApplication.class, args);
-	}
-
-	@RequestMapping("/home")
-	public String yes() {
-		return "Hi my name is Chris Broad and this is the home page";
 	}
 }
