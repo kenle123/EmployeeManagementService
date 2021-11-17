@@ -8,10 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/v1/employee")
 public class EmployeeController {
-
-    @GetMapping
+    @GetMapping("api/v1/employee")
     public List<Employee> getEmployee() {
         return List.of(new Employee("Bob Jones", "Male", 22, 99999, 25000, "Janitor"));
     }
