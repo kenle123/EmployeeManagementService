@@ -14,10 +14,4 @@ public class EmployeeController {
     public List<Employee> getEmployee() {
         return List.of(new Employee("Bob Jones", "Male", 22, 99999, 25000, "Janitor"));
     }
-
-    // Login screen
-    @GetMapping("/login")
-    public String temp2() {
-        return "Login Screen";
-    }
 }
