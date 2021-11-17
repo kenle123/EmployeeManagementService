@@ -1,4 +1,4 @@
-package com.kale.employeemanagementservice.EmployeeManagementService.controller;
+package com.kale.employeemanagementservice.EmployeeManagementService.model;
 
 public class Employee {
     private String name;
@@ -15,13 +15,6 @@ public class Employee {
         this.id = id;
         this.salary = salary;
         this.position = position;
-    }
-
-    public Employee(String name, String gender, int age, int id) {
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
-        this.id = id;
     }
 
     public String getName() {
@@ -72,3 +65,9 @@ public class Employee {
         this.position = position;
     }
 }
+
+
+
+
+
+
