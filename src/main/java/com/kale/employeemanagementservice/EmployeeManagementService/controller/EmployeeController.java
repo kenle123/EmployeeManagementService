@@ -1,6 +1,7 @@
 package com.kale.employeemanagementservice.EmployeeManagementService.controller;
 
 import com.kale.employeemanagementservice.EmployeeManagementService.model.Employee;
+import com.kale.employeemanagementservice.EmployeeManagementService.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
