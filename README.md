@@ -4,7 +4,8 @@
 ### Utilizes:
 - Spring Web
 - Thymeleaf
+
+### In Progress:
 - PostgreSQL
-- Future
- -  Docker
- -  AWS
+-  Docker
+-  AWS
