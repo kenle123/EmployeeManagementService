@@ -19,7 +19,7 @@ body {
 
 @media screen and (max-width: 450px) {
     .login-form{
-        margin-top: 10%;
+        margin-top: 80%;
     }
 }
 
@@ -54,4 +54,12 @@ body {
 .btn-black{
     background-color: #000 !important;
     color: #fff;
+}
+
+button {
+    margin-top: 1em;
+}
+
+#email {
+    margin-bottom: 0.7em;
 }

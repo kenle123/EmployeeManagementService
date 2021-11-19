@@ -3,6 +3,7 @@ package com.kale.employeemanagementservice.EmployeeManagementService.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -13,4 +14,6 @@ public class LoginController {
         model.addAttribute("name", name);
         return "login";
     }
+
+
 }
