@@ -1,6 +1,21 @@
 package com.kale.employeemanagementservice.EmployeeManagementService.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table
 public class Employee {
+
+    @Id
+    @SequenceGenerator(
+            name = "employee_sequence",
+            sequenceName = "employee_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "employee_sequence"
+    )
     private String name;
     private String gender;
     private int age;
