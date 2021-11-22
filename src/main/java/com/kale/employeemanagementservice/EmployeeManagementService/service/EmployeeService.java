@@ -1,14 +1,23 @@
 package com.kale.employeemanagementservice.EmployeeManagementService.service;
 
 import com.kale.employeemanagementservice.EmployeeManagementService.model.Employee;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
 public class EmployeeService {
+
+    private final EmployeeRepository employeeRepository;
+
+    @Autowired
+    public EmployeeService(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
+
     public List<Employee> getEmployee() {
-        return List.of(new Employee("Ken Le", "Male", 12, 1, 50000, "Software Engineer"),
-                       new Employee("Allen Le", "Male", 10, 2, 25000, "Application Developer"));
+        return employeeRepository.findAll();
     }
 }
