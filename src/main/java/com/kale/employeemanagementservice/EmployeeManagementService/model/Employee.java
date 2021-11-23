@@ -1,5 +1,7 @@
 package com.kale.employeemanagementservice.EmployeeManagementService.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,15 +9,17 @@ import javax.persistence.*;
 public class Employee {
 
     @Id
+    @GeneratedValue(generator="system-uuid", strategy = GenerationType.SEQUENCE)
+    @GenericGenerator(name="system-uuid", strategy = "uuid")
     @SequenceGenerator(
             name = "employee_sequence",
             sequenceName = "employee_sequence",
             allocationSize = 1
     )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "employee_sequence"
-    )
+//    @GeneratedValue(
+//            strategy = GenerationType.SEQUENCE,
+//            generator = "employee_sequence"
+//    )
     private String name;
     private String gender;
     private int age;
@@ -30,6 +34,10 @@ public class Employee {
         this.id = id;
         this.salary = salary;
         this.position = position;
+    }
+
+    public Employee() {
+
     }
 
     public String getName() {
