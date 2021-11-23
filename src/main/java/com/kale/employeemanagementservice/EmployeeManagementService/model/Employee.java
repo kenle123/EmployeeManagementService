@@ -8,18 +8,25 @@ import javax.persistence.*;
 @Table
 public class Employee {
 
+//    @Id
+//    @SequenceGenerator(
+//            name = "employee_sequence",
+//            sequenceName = "employee_sequence",
+//            allocationSize = 1
+//    )
+//    @GeneratedValue(
+//            strategy = GenerationType.SEQUENCE,
+//            generator = "employee_sequence"
+//    )
+
     @Id
-    @GeneratedValue(generator="system-uuid", strategy = GenerationType.SEQUENCE)
     @GenericGenerator(name="system-uuid", strategy = "uuid")
     @SequenceGenerator(
             name = "employee_sequence",
             sequenceName = "employee_sequence",
             allocationSize = 1
     )
-//    @GeneratedValue(
-//            strategy = GenerationType.SEQUENCE,
-//            generator = "employee_sequence"
-//    )
+
     private String name;
     private String gender;
     private int age;
