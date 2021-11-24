@@ -1,10 +1,11 @@
 # EmployeeManagementService
 ### Spring Boot web application to manage employee information
- 
-### Current functionality: To be determined :)
 
 ### Utilizes:
 - Spring Web
 - Thymeleaf
+
+### In Progress:
 - PostgreSQL
-- More in the future 👀
+-  Docker
+-  AWS
