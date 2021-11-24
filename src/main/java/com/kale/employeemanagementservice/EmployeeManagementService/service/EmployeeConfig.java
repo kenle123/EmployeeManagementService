@@ -1,6 +1,7 @@
 package com.kale.employeemanagementservice.EmployeeManagementService.service;
 
 import com.kale.employeemanagementservice.EmployeeManagementService.model.Employee;
+import com.kale.employeemanagementservice.EmployeeManagementService.repository.EmployeeRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
