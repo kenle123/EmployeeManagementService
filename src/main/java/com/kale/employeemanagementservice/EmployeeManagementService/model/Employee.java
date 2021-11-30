@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 @Table
 public class Employee {
-    @Id
+
     @GenericGenerator(name="system-uuid", strategy = "uuid")
     @SequenceGenerator(
             name = "employee_sequence",
@@ -18,7 +18,8 @@ public class Employee {
     private String name;
     private String gender;
     private int age;
-    private int id;
+    @Id
+    private Integer id;
     private int salary;
     private String position;
 
@@ -59,11 +60,11 @@ public class Employee {
         this.age = age;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -32,4 +32,11 @@ public class EmployeeService {
         employeeRepository.save(employee);
     }
 
+    public void deleteEmployee(int employeeId) {
+        boolean exists = employeeRepository.existsById(employeeId);
+        if(!exists) {
+            throw new IllegalStateException("employee with id:" + employeeId + " does not exist");
+        }
+        employeeRepository.deleteById(employeeId);
+    }
 }
