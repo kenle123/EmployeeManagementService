@@ -16,8 +16,8 @@ public class EmployeeConfig {
     @Bean
     CommandLineRunner commandLineRunner(EmployeeRepository repository) {
         return args -> {
-            Employee Ken = new Employee("Ken Le", "Male", 12, 1, 50000, "Software Engineer");
-            Employee Allen = new Employee("Allen Le", "Male", 10, 2, 25000, "Application Developer");
+            Employee Ken = new Employee(1, "Ken Le", "Male", 15, 50000, "Software Engineer");
+            Employee Allen = new Employee(2, "Allen Le", "Male", 14, 25000, "Application Developer");
 
             repository.saveAll(List.of(Ken, Allen));
         };
