@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Employee Management Service - Login</title>
+        <title>Employee Management Service - Register</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -16,13 +16,13 @@
         <div class="sidenav">
             <div class="login-main-text">
                 <h2>Employee Management Service</h2>
-                <p>Login</p>
+                <p>Register</p>
             </div>
         </div>
         <div class="main">
             <div class="col-md-6 col-sm-12">
                 <div class="login-form">
-                    <form action="#" th:action="@{/login}" th:object="${admin}" method="post">
+                    <form action="#" th:action="@{/register}" th:object="${admin}" method="post">
                         <div class="form-group">
                             <label>Email</label>
                             <input type="text" class="form-control" id="email_input" placeholder="Email" th:field="*{email}">
@@ -31,9 +31,8 @@
                             <label>Password</label>
                             <input type="password" class="form-control" id="password_input" placeholder="Password" th:field="*{password}">
                         </div>
-                        <button type="submit" class="btn btn-black" value="Login">Login</button>
-                        <a class="btn btn-black" th:href="@{/register}">Go To Register Page</a>
-<!--                        <p th:if="${invalidCredential}" id="error_message">Username or Password is incorrect!</p>-->
+                        <button type="submit" class="btn btn-black" value="Register">Register</button>
+                        <a class="btn btn-black" th:href="@{/login}">Go To Login Page</a>
                     </form>
                 </div>
             </div>

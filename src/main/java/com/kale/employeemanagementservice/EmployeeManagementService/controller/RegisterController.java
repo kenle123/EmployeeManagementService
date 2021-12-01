@@ -7,24 +7,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.logging.Logger;
+
 @Controller
-public class LoginController {
-    @GetMapping("/login")
-    public String getLoginPage() {
-        return "login";
+public class RegisterController {
+    @GetMapping("/register")
+    public String getRegisterPage(Model model) {
+        model.addAttribute("admin", new Admin());
+        return "register";
     }
 
-    @PostMapping("/login")
-    public String postLoginCredentials(@ModelAttribute Admin admin, Model model) {
+    @PostMapping("/register")
+    public String postRegisterCredentials(@ModelAttribute Admin admin, Model model) {
         String email = admin.getEmail();
         String password = admin.getPassword();
 
-        if(email.equals("admin") && password.equals("admin")) {
-            model.addAttribute("invalidCredential", false);
-            return "home";
-        }
-
-        model.addAttribute("invalidCredential", true);
-        return "login";
+        System.out.println("email is: " + email + " password is: " + password);
+        return "register";
     }
 }
