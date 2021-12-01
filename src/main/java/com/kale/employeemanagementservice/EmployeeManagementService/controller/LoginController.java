@@ -17,7 +17,7 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public String registerSuccess(@ModelAttribute Admin admin, Model model){
+    public String postLoginCredentials(@ModelAttribute Admin admin, Model model) {
         String email = admin.getEmail();
         String password = admin.getPassword();
 
