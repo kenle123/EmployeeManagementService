@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-
 @Service
 public class EmployeeService {
 
@@ -32,4 +31,11 @@ public class EmployeeService {
         employeeRepository.save(employee);
     }
 
+    public void deleteEmployee(int employeeId) {
+        boolean exists = employeeRepository.existsById(employeeId);
+        if(!exists) {
+            throw new IllegalStateException("Employee with id: " + employeeId + " does not exist");
+        }
+        employeeRepository.deleteById(employeeId);
+    }
 }

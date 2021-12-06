@@ -15,24 +15,32 @@ public class Employee {
             allocationSize = 1
     )
 
+    private Integer id;
     private String name;
     private String gender;
     private int age;
-    private int id;
     private int salary;
     private String position;
 
-    public Employee(String name, String gender, int age, int id, int salary, String position) {
+    public Employee(Integer id, String name, String gender, int age, int salary, String position) {
+        this.id = id;
         this.name = name;
         this.gender = gender;
         this.age = age;
-        this.id = id;
         this.salary = salary;
         this.position = position;
     }
 
     public Employee() {
 
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -57,14 +65,6 @@ public class Employee {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getSalary() {

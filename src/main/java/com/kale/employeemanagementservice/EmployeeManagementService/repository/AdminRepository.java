@@ -1,6 +1,6 @@
 package com.kale.employeemanagementservice.EmployeeManagementService.repository;
 
-import com.kale.employeemanagementservice.EmployeeManagementService.model.Employee;
+import com.kale.employeemanagementservice.EmployeeManagementService.model.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+public interface AdminRepository extends JpaRepository<Admin, Integer> {
 
-    @Query("SELECT e FROM Employee e WHERE e.id = :id")
-    Optional<Employee> findEmployeeById(int id);
+    @Query("SELECT a FROM Admin a WHERE a.id = :id")
+    Optional<Admin> findAdminById(int id);
 }
