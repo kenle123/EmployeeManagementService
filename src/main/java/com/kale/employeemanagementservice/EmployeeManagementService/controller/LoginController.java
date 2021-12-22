@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class LoginController {
     @GetMapping("/login")
-    public String getLoginPage() {
+    public String getLoginPage(Model model) {
+        model.addAttribute("admin", new Admin());
         return "login";
     }
 

@@ -16,6 +16,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 @Controller
@@ -39,22 +40,20 @@ public class RegisterController  {
 
         String email = admin.getEmail();
         String password = admin.getPassword();
+        int randomNum = ThreadLocalRandom.current().nextInt(0, 100 + 1);
 
         String insertString = "INSERT INTO admin" + "  (id, email, password) VALUES " + " (?, ?, ?);";
 
         try(Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/employee", "postgres", "kekw123");
 
             PreparedStatement preparedStatement = connection.prepareStatement(insertString)) {
-            preparedStatement.setInt(1,22);
+            preparedStatement.setInt(1, randomNum);
             preparedStatement.setString(2, email);
             preparedStatement.setString(3, password);
 
             System.out.println(preparedStatement);
             preparedStatement.executeUpdate();
-
         }
-
-
         return "register";
     }
 }
