@@ -20,6 +20,7 @@ public class Admin {
     private String password;
 
     public Admin(Integer id, String email, String password) {
+        this.id = id;
         this.email = email;
         this.password = password;
     }
