@@ -36,11 +36,6 @@ public class LoginController {
             System.out.println(a.getEmail() + "  " + a.getPassword());
         }
 
-//        String email = admin.getEmail();
-//        String password = admin.getPassword();
-
-
-
 //        if(email.equals("admin") && password.equals("admin")) {
 //            model.addAttribute("invalidCredential", false);
 //            return "home";

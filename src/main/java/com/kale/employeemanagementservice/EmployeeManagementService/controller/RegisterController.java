@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.sql.SQLException;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Controller
 public class RegisterController  {
@@ -29,6 +29,8 @@ public class RegisterController  {
 
     @PostMapping("/register")
     public String postRegisterCredentials(@ModelAttribute @RequestBody Admin admin, Model model) {
+        int randomNum = ThreadLocalRandom.current().nextInt(0, 100 + 1);
+        admin.setId(randomNum);
         adminService.addNewAdmin(admin);
         return "register";
     }
