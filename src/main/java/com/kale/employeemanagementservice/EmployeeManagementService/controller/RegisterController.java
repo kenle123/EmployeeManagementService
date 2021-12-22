@@ -21,14 +21,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 @Controller
 public class RegisterController  {
-
-    @Autowired
-    public JdbcTemplate jdbcTemplate;
-
-    @Autowired
-    public AdminRepository adminRepository;
-
-
     @GetMapping("/register")
     public String getRegisterPage(Model model) {
         model.addAttribute("admin", new Admin());

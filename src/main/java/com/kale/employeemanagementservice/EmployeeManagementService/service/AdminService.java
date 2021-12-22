@@ -23,11 +23,6 @@ public class AdminService {
     }
 
     public void addNewAdmin(Admin admin) {
-        Optional<Admin> adminOptional = adminRepository.findAdminById(admin.getId());
-
-        if(adminOptional.isPresent()) {
-            throw new IllegalStateException("Id Taken");
-        }
         adminRepository.save(admin);
     }
 

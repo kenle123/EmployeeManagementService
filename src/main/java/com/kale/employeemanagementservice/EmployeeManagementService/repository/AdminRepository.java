@@ -10,6 +10,4 @@ import java.util.Optional;
 @Repository
 public interface AdminRepository extends JpaRepository<Admin, Integer> {
 
-    @Query("SELECT a FROM Admin a WHERE a.id = :id")
-    Optional<Admin> findAdminById(int id);
 }
